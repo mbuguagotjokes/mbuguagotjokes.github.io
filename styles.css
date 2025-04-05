@@ -48,9 +48,16 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
   background-color: #edf2f4;
   font-family: Gupter;
+  box-sizing: border-box;
+}
+
+* , *:before, *:after{
+  box-sizing: inherit;
 }
 
 aside{
@@ -77,11 +84,13 @@ main{
   grid-template-areas:
     "aside main"
     ;
-  height: 100vh;
-  width: 100vw;
+  margin: auto;
+  min-height: 100vh;
+  width: 100%; 
   margin: 0;
   gap: 68.25px;
   margin-top: 50px;
+  /* overflow: visible; */
 }
 
 .aside-container{
@@ -144,7 +153,7 @@ input, label, textarea, .btn{
   background-color: #d90429;
   border-radius: 10px;
   justify-self: center;
-  background-position: center; /* Focus on the middle part of the image */
+  background-position: center; 
   background-size: cover;
   box-sizing: border-box;
 }
@@ -185,7 +194,8 @@ input, label, textarea, .btn{
   html, body{
     font-size: 0.9em;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    padding-right: 10px;
   }
 
   .container{
@@ -196,6 +206,7 @@ input, label, textarea, .btn{
       "aside"
       "main"
     ;
+    width: 100%;
   }
 
   aside{
@@ -220,7 +231,4 @@ input, label, textarea, .btn{
     visibility: hidden;
   }
 
-  .img-container{
-    margin: 10px;
-  }
 }
