@@ -72,7 +72,7 @@ main{
 
 .container{
   display: grid;
-  grid-template-columns: 1fr, 3f;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
   grid-template-areas:
     "aside main"
@@ -146,6 +146,7 @@ input, label, textarea, .btn{
   justify-self: center;
   background-position: center; /* Focus on the middle part of the image */
   background-size: cover;
+  box-sizing: border-box;
 }
 
 #img-pop-up{
@@ -175,4 +176,51 @@ input, label, textarea, .btn{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+/* responsive design */
+
+@media screen and (max-width: 950px) {
+  html, body{
+    font-size: 0.9em;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+      "aside"
+      "main"
+    ;
+  }
+
+  aside{
+    grid-area: aside;
+    margin: auto;
+    font-family: Gupter;
+  }
+
+  .aside-container{
+    position: static;
+  }
+  
+  main{
+    grid-area: main;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    font-family: Gupter ,Caveat Brush;
+  }
+
+  .silver{
+    visibility: hidden;
+  }
+
+  .img-container{
+    margin: 10px;
+  }
 }
