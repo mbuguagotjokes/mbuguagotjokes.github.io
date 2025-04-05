@@ -48,16 +48,22 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
   background-color: #edf2f4;
   font-family: Gupter;
 }
+
 
 aside{
   grid-area: aside;
   text-align: right;
   padding-left: 20px;
   font-family: Gupter;
+  /* width: 100%; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 main{
@@ -67,6 +73,8 @@ main{
   padding-right: 0;
   font-family: Gupter ,Caveat Brush;
   font-size: 120%;
+  word-break: break-word;
+  /* overflow-x: hidden; */
 }
 
 
@@ -77,16 +85,19 @@ main{
   grid-template-areas:
     "aside main"
     ;
-  height: 100vh;
-  width: 100vw;
+  margin: auto;
+  min-height: 100vh;
   margin: 0;
   gap: 68.25px;
   margin-top: 50px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 .aside-container{
-  position: sticky;
-  top: 25%;
+  position: relative;
 }
 
 a{
@@ -103,7 +114,7 @@ a:hover{
 
 .silver{
   height: 100px;
-  width: 100px;
+  width: 100px; 
   background-color: #d90429;
   grid-area: silver;
   position: absolute;
@@ -139,12 +150,15 @@ input, label, textarea, .btn{
 }
 
 .img-container{
-  width: 470px;
-  height: 800px;
+  width: 100%;
+  max-width: 470px;
+  aspect-ratio: 3/5;
+  height: 100%;
+  max-height: 800px;
   background-color: #d90429;
   border-radius: 10px;
   justify-self: center;
-  background-position: center; /* Focus on the middle part of the image */
+  background-position: center; 
   background-size: cover;
   box-sizing: border-box;
 }
@@ -182,45 +196,51 @@ input, label, textarea, .btn{
 /* responsive design */
 
 @media screen and (max-width: 950px) {
-  html, body{
-    font-size: 0.9em;
-    height: 100vh;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "aside"
+      "main";
+    gap: 20px;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  aside {
+    grid-area: aside;
+    width: 100vw;
+    padding-left: 0px;
+  }
+
+  .aside_container{
+    position: static;
+    word-break: break-word;
+    justify-items: center;
+    padding: 20px;
+  }
+
+  main {
+    grid-area: main;
     width: 100vw;
   }
 
-  .container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: 
-      "aside"
-      "main"
-    ;
+  .main-container{
+    padding: 20px;
+    font-size: 110%;
+    word-break: break-word;
   }
 
-  aside{
-    grid-area: aside;
-    margin: auto;
-    font-family: Gupter;
+  .img-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 3/5;
   }
 
-  .aside-container{
-    position: static;
-  }
-  
-  main{
-    grid-area: main;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
-    font-family: Gupter ,Caveat Brush;
-  }
-
-  .silver{
-    visibility: hidden;
-  }
-
-  .img-container{
-    margin: 10px;
+  .silver {
+    display: none;
   }
 }

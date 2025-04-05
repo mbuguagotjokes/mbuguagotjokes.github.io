@@ -6,7 +6,7 @@
     <head>
         <!-- charset and responsivity -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale=1.0, user-scalable="no">
 
         <!-- seo -->
         <meta name="decription" content="cs50 pset8/homepage for @mbuguaaaaaa">
@@ -49,56 +49,60 @@
       </div>
         <div class="container">
           <aside>
-            <div class="aside-container">
-              <h2><a href="">Home page</a> of</h2>
-                <h1><a href="">Calvin Mbugua</a></h1>
-                <div class="aside-intro">
-                <h2 class="heading">Computer prodigy <br> music enthusiast <br> practicing computer science</h2>
-                </div>
-                <div class="aside-w-silver">
-                  <div class="silver"></div>
-                  <div class="aside-socials">
-                    <a class="email-social" href="mailto:calvinmbuguam@gmail.com">calvinmbuguam@gmail.com</a>
-                    <p class="">
-                      <a href="https://github.com/mbuguagotjokes" target="_blank"><i class="fi fi-brands-github"></i></a>
-                      <a href="https://instagram.com/mbuguaaaaaa" target="_blank"><i class="fi fi-brands-instagram"></i></a>
-                      <a href="https://x.com/mbuguagotjokes" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i></a>
-                    </p>
+            <div class="aside_container">
+              <div class="aside-container">
+                  <h2><a href="">Home page</a> of</h2>
+                  <h1><a href="">Calvin Mbugua</a></h1>
+                  <div class="aside-intro">
+                  <h2 class="heading">Computer prodigy <br> music enthusiast <br> practicing computer science</h2>
                   </div>
-                  <div class="aside-nav">
-                    <nav>
-                      <ul class="nav-ul">
-                          <li><a href="index" id="index-link">Home</a></li>
-                          <li><a href="about" id="about-link">About</a></li>
-                          <li><a href="contact" style="color: #1d3557" id="contact-link">Contact</a></li>
-                      </ul>
-                  </nav>
-                  <div>© <span id="year"></span></div>
+                  <div class="aside-w-silver">
+                    <div class="silver"></div>
+                    <div class="aside-socials">
+                      <a class="email-social" href="mailto:calvinmbuguam@gmail.com">calvinmbuguam@gmail.com</a>
+                      <p class="">
+                        <a href="https://github.com/mbuguagotjokes" target="_blank"><i class="fi fi-brands-github"></i></a>
+                        <a href="https://instagram.com/mbuguaaaaaa" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+                        <a href="https://x.com/mbuguagotjokes" target="_blank"><i class="fi fi-brands-twitter-alt-circle"></i></a>
+                      </p>
+                    </div>
+                    <div class="aside-nav">
+                      <nav>
+                        <ul class="nav-ul">
+                            <li><a href="index" id="index-link">Home</a></li>
+                            <li><a href="about" id="about-link">About</a></li>
+                            <li><a href="contact" style="color: #1d3557" id="contact-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div>© <span id="year"></span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+            </div>
           </aside>
           <main id="contact-main">
-            <div class="img"></div>
-            <hr>
-            <h1>Contact Page</h1>
-            <hr>
-            <div class="contact-form">
-                <form>
-                    <label for="name-contact">Name</label>
-                    <input type="text" name="name" required placeholder="Mbugua" value="Mbugua" id="name-contact" autocomplete="off">
-                    <label for="email-contact">Email</label>
-                    <input type="email" name="email" required placeholder="example@email.com" value="example@email.com" id="email-contact" autocomplete="off">
-                    <label for="text-area-contact">Message</label>
-                    <textarea name="message" class="contact-form" autocomplete="off" requred row="5" id="text-area-contact">Type something like: hey I really like this website ...</textarea>
-                    <br>
-                    <button class="btn" type="submit">Submit</button>
-                </form>
+            <div class="main-container"> 
+              <div class="img"></div>
+              <hr>
+              <h1>Contact Page</h1>
+              <hr>
+              <div class="contact-form">
+                  <form>
+                      <label for="name-contact">Name</label>
+                      <input type="text" name="name" required placeholder="Mbugua" value="Mbugua" id="name-contact" autocomplete="off">
+                      <label for="email-contact">Email</label>
+                      <input type="email" name="email" required placeholder="example@email.com" value="example@email.com" id="email-contact" autocomplete="off">
+                      <label for="text-area-contact">Message</label>
+                      <textarea name="message" class="contact-form" autocomplete="off" requred row="5" id="text-area-contact">Type something like: hey I really like this website ...</textarea>
+                      <br>
+                      <button class="btn" type="submit">Submit</button>
+                  </form>
+              </div>
+              <hr>
+              <p style="text-align: center; font-size: 15px; font-style: italic">- Some image</p>
+              <br>
+              <div class="img-container"></div>
             </div>
-            <hr>
-            <p style="text-align: center; font-size: 15px; font-style: italic">- Some image</p>
-            <br>
-            <div class="img-container"></div>
           </main>
         </div>
     </body>
